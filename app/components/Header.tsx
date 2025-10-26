@@ -17,7 +17,7 @@ export default function Header() {
     <header className="bg-gray-800 text-white shadow-2xl border-b border-pink-500/20">
       <div className="container mx-auto px-4">
         {/* Верхняя строка с настройками - увеличенная */}
-        <div className="flex justify-between items-center py-4 border-b border-gray-800 bg-gray-800">
+        <div className="hidden md:flex justify-between items-center py-4 border-b border-gray-800 bg-gray-800">
           {/* Левая сторона - пустое пространство */}
           <div></div>
           
@@ -59,19 +59,19 @@ export default function Header() {
         </div>
 
         {/* Основная навигация */}
-        <div className="flex justify-between items-center py-6">
+        <div className="flex justify-between items-center py-4 md:py-6">
           {/* Логотип и название в стиле Rīnūži */}
-          <Link href="/" className="flex items-center space-x-4 group">
+          <Link href="/" className="flex items-center space-x-2 md:space-x-4 group">
             <div className="text-center">
-              <div className="text-base text-pink-400 mb-2 tracking-wider">THIS IS</div>
-              <div className="text-5xl font-black neon-text tracking-wider">RĪNŪŽI</div>
-              <div className="text-base text-pink-400 mt-2 tracking-wider">EST. 1990</div>
-              <div className="text-xl text-pink-300 tracking-widest">HANDBOLS</div>
+              <div className="text-xs md:text-base text-pink-400 mb-1 md:mb-2 tracking-wider">THIS IS</div>
+              <div className="text-2xl md:text-5xl font-black neon-text tracking-wider">RĪNŪŽI</div>
+              <div className="text-xs md:text-base text-pink-400 mt-1 md:mt-2 tracking-wider">EST. 1990</div>
+              <div className="text-sm md:text-xl text-pink-300 tracking-widest">HANDBOLS</div>
             </div>
           </Link>
 
           {/* Навигация для десктопа в винтажном стиле */}
-          <nav className="hidden md:flex space-x-8 flex-1 justify-center">
+          <nav className="hidden lg:flex space-x-4 xl:space-x-8 flex-1 justify-center">
             {[
               { href: '/', label: 'SĀKUMS' },
               { href: '/news', label: 'ZIŅAS' },
@@ -83,7 +83,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-6 py-4 text-xl font-bold tracking-wider transition-all duration-300 hover:text-pink-400 hover:bg-pink-500/10 rounded"
+                className="px-3 xl:px-6 py-3 xl:py-4 text-base xl:text-xl font-bold tracking-wider transition-all duration-300 hover:text-pink-400 hover:bg-pink-500/10 rounded"
               >
                 {item.label}
               </Link>
@@ -91,8 +91,25 @@ export default function Header() {
           </nav>
 
           {/* Мобильное меню */}
-          <div className="md:hidden flex items-center space-x-2">
-            <button className="text-white hover:text-pink-400 transition-colors duration-300 p-2">
+          <div className="lg:hidden flex items-center space-x-2">
+            {/* Мобильный переключатель языков */}
+            <div className="md:hidden flex items-center space-x-1">
+              {languages.map((lang) => (
+                <button
+                  key={lang}
+                  onClick={() => switchLanguage(lang)}
+                  className={`px-2 py-1 rounded text-xs font-bold tracking-wider transition-colors duration-300 ${
+                    currentLanguage === lang 
+                      ? 'text-pink-400 bg-pink-500/20' 
+                      : 'text-white hover:text-pink-400'
+                  }`}
+                >
+                  {lang}
+                </button>
+              ))}
+            </div>
+            
+            <button className="text-white hover:text-pink-400 transition-colors duration-300 p-2 md:hidden">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>

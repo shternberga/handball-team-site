@@ -31,9 +31,9 @@ export default function NewsPage() {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 min-h-screen py-8">
+    <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 min-h-screen py-6 md:py-8">
       <div className="container mx-auto px-4">
-        <h1 className="text-5xl font-bold text-center mb-16 shimmer-text">
+        <h1 className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-16 shimmer-text">
           Komandas jaunumi
         </h1>
         

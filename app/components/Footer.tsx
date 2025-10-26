@@ -12,63 +12,66 @@ export default function Footer() {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {/* О школе */}
-          <div className="retro-card rounded-lg p-6">
-            <h3 className="text-xl font-bold mb-4 neon-text tracking-wider">PAR RĪGAS RĪNŪŽU VIDUSSKOLU</h3>
-            <p className="text-gray-300 leading-relaxed">
+          <div className="retro-card rounded-lg p-4 md:p-6">
+            <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 neon-text tracking-wider">PAR RĪGAS RĪNŪŽU VIDUSSKOLU</h3>
+            <p className="text-gray-300 leading-relaxed text-sm md:text-base">
               Rīgas Rīnūžu vidusskola ir vadošā izglītības iestāde ar spēcīgām sporta tradīcijām. 
               Mūsu handbola pulciņš ir skolas lepnums kopš 1990. gada.
             </p>
           </div>
 
           {/* Kontakti */}
-          <div className="retro-card rounded-lg p-6">
-            <h3 className="text-xl font-bold mb-4 neon-text tracking-wider">KONTAKTI</h3>
-            <div className="text-gray-300 space-y-3">
-              <p className="flex items-center">
-                <span className="text-pink-400 mr-3 text-lg">📧</span> 
-                <span className="font-bold tracking-wide">handbols@rinuzi.lv</span>
+          <div className="retro-card rounded-lg p-4 md:p-6">
+            <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 neon-text tracking-wider">KONTAKTI</h3>
+            <div className="text-gray-300 space-y-2 md:space-y-3">
+              <p className="flex items-center text-sm md:text-base">
+                <span className="text-pink-400 mr-2 md:mr-3 text-base md:text-lg">📧</span> 
+                <span className="font-bold tracking-wide break-all">handbols@rinuzi.lv</span>
               </p>
-              <p className="flex items-center">
-                <span className="text-pink-400 mr-3 text-lg">📞</span> 
+              <p className="flex items-center text-sm md:text-base">
+                <span className="text-pink-400 mr-2 md:mr-3 text-base md:text-lg">📞</span> 
                 <span className="font-bold tracking-wide">+371 29 788 881</span>
               </p>
-              <p className="flex items-center">
-                <span className="text-pink-400 mr-3 text-lg">📍</span> 
+              <p className="flex items-start text-sm md:text-base">
+                <span className="text-pink-400 mr-2 md:mr-3 text-base md:text-lg mt-0.5">📍</span> 
                 <span className="font-bold tracking-wide">Augusta Dombrovska iela 88, Riga, Latvia</span>
               </p>
             </div>
           </div>
 
           {/* Sociālie tīkli */}
-          <div className="retro-card rounded-lg p-6">
-            <h3 className="text-xl font-bold mb-4 neon-text tracking-wider">MĒS SOCIĀLAJOS TĪKLOS</h3>
-            <div className="flex space-x-4">
+          <div className="retro-card rounded-lg p-4 md:p-6">
+            <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 neon-text tracking-wider">MĒS SOCIĀLAJOS TĪKLOS</h3>
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
               <a 
                 href="#" 
-                className="group relative overflow-hidden retro-button text-black px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="group relative overflow-hidden retro-button text-black px-3 md:px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg text-center"
               >
-                <span className="relative z-10 font-bold tracking-wider">FACEBOOK</span>
+                <span className="relative z-10 font-bold tracking-wider text-sm md:text-base">FACEBOOK</span>
               </a>
               <a 
                 href="#" 
-                className="group relative overflow-hidden retro-button text-black px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="group relative overflow-hidden retro-button text-black px-3 md:px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg text-center"
               >
-                <span className="relative z-10 font-bold tracking-wider">INSTAGRAM</span>
+                <span className="relative z-10 font-bold tracking-wider text-sm md:text-base">INSTAGRAM</span>
               </a>
             </div>
           </div>
         </div>
 
         {/* Винтажный логотип в футере */}
-        <div className="border-t border-pink-500/30 mt-12 pt-8 text-center">
-          <div className="mb-4">
-            <div className="text-sm text-pink-400 mb-2 tracking-[0.3em]">THIS IS</div>
-            <div className="text-2xl font-black neon-text tracking-[0.2em]">RĪNŪŽI</div>
-            <div className="text-xs text-pink-400 mt-1 tracking-[0.4em]">EST. 1990</div>
+        <div className="border-t border-pink-500/30 mt-8 md:mt-12 pt-6 md:pt-8 text-center">
+          <div className="mb-3 md:mb-4">
+            <div className="text-xs md:text-sm text-pink-400 mb-1 md:mb-2 tracking-[0.3em]">THIS IS</div>
+            <div className="text-xl md:text-2xl font-black neon-text tracking-[0.2em]">RĪNŪŽI</div>
+            <div className="text-xs md:text-xs text-pink-400 mt-1 tracking-[0.4em]">EST. 1990</div>
           </div>
-          <p className="text-gray-400 font-bold tracking-wider">&copy; 2025 RĪGAS RĪNŪŽU VIDUSSKOLAS HANDBOLA PULCIŅŠ. VISAS TIESĪBAS AIZSARGĀTAS.</p>
+          <p className="text-gray-400 font-bold tracking-wider text-xs md:text-sm leading-relaxed">
+            &copy; 2025 RĪGAS RĪNŪŽU VIDUSSKOLAS HANDBOLA PULCIŅŠ.<br className="md:hidden" /> 
+            <span className="hidden md:inline"> </span>VISAS TIESĪBAS AIZSARGĀTAS.
+          </p>
         </div>
       </div>
     </footer>
