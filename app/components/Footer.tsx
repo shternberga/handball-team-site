@@ -69,7 +69,7 @@ export default function Footer() {
             <div className="text-xs md:text-xs text-pink-400 mt-1 tracking-[0.4em]">EST. 1990</div>
           </div>
           <p className="text-gray-400 font-bold tracking-wider text-xs md:text-sm leading-relaxed">
-            &copy; 2025 RĪGAS RĪNŪŽU VIDUSSKOLAS HANDBOLA PULCIŅŠ.<br className="md:hidden" /> 
+            &copy; 1990 RĪGAS RĪNŪŽU VIDUSSKOLAS HANDBOLA PULCIŅŠ.<br className="md:hidden" /> 
             <span className="hidden md:inline"> </span>VISAS TIESĪBAS AIZSARGĀTAS.
           </p>
         </div>
